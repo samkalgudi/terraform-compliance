@@ -98,7 +98,7 @@ def func(step, search_regex):
         return
 
     normalise_tag_values(step.context.stash)
-    regex = r'/{}/'.format(search_regex)
+    regex = r'{}'.format(search_regex)
 
     for property in step.context.stash.properties:
         if type(property.property_value) in [str, unicode]:
